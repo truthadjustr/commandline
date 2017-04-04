@@ -34,3 +34,4 @@ HISTORY() {
     [ $# -eq 0 ] && return
     grep $1 ~/bash_history/*
 }
+alias od='od -w32 --endian=big -t x1z' 
