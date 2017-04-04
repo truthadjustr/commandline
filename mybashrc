@@ -1,0 +1,36 @@
+if (($(echo $BASH_VERSION |cut -d'.' -f2)>=3));then
+    export HISTFILESIZE=-1 HISTSIZE=-1
+    a="[1;31m"
+    b="[0;31m"
+    c="[1;34m"
+    p="\342\224\214"
+    q="\342\224\200"
+    r="\342\224\224"
+    E="\e"
+    export PS1="\[$E$b\]$p$q<\[$E$a\]\$?\[$E$b\]>$q\[$E$a\][\[$E$b\]\h:\[$E$c\]\w\[$E$a\]]<\[$E$a\]\[$E$b\]\$msgcount\[$E$a\]>\n$r\[$E$b\]"
+else
+    export HISTFILESIZE=400000000
+    export HISTSIZE=10000
+fi
+
+mkdir ~/bash_history/ 2>/dev/null || true
+HISTCONTROL=ignoreboth
+export HISTIGNORE="&:ls:[bf]g:exit:pwd:clear:history:mount:umount:[ \t]*"
+PROMPT_COMMAND="history -a;history -n;notif"
+HISTFILE=~/bash_history/$(date +%Y-%m)
+shopt -s histappend
+
+notif() {
+    # asynchronous messages goes to this file
+    f=~/inbox
+    if [ -f $f ];then
+        msgcount=$(wc -l $f)
+    else
+        unset msgcount
+    fi
+}
+
+HISTORY() {
+    [ $# -eq 0 ] && return
+    grep $1 ~/bash_history/*
+}
