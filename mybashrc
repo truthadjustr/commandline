@@ -1,7 +1,7 @@
 if (($(echo $BASH_VERSION |cut -d'.' -f2)>=3));then
     export HISTFILESIZE=-1 HISTSIZE=-1
     a="[1;31m"
-    b="[0;31m"
+    b="[0;36m"
     c="[1;34m"
     p="\342\224\214"
     q="\342\224\200"
