@@ -36,4 +36,14 @@ HISTORY() {
     [ $# -eq 0 ] && return
     grep $1 ~/bash_history/*
 }
+
 alias od='od -w32 --endian=big -t x1z' 
+
+if [ -z "$TMUX" ];then
+    if tmux ls 2>/dev/null; then
+        tmux attach -t "main"
+    else
+        tmux new-session -s "main"
+    fi
+fi
+
