@@ -8,6 +8,11 @@ HostName github.com
 User git
 IdentityFile ~/.ssh/docker_id_rsa
 
+Host truthadjustr@github.com
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa_truth
+
 Host github.w3ibm.bluemix.net
 HostName github.w3ibm.bluemix.net
 User git
