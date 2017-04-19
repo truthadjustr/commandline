@@ -7,4 +7,3 @@ cp dotgitconfig /root/.gitconfig
 cp config /root/.ssh/
 git remote set-url origin git+ssh://github.com/syscools/commandline.git
 echo ". $(pwd)/mybashrc" >> ~/.bashrc
-. ~/.bashrc
