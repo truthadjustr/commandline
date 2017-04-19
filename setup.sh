@@ -6,5 +6,5 @@ cp dot_tmux.conf /root/.tmux.conf
 cp dotgitconfig /root/.gitconfig
 cp config /root/.ssh/
 git remote set-url origin git+ssh://github.com/syscools/commandline.git
-echo "source $(pwd)/mybashrc" >> ~/.bashrc
-source ~/.bashrc
+echo ". $(pwd)/mybashrc" >> ~/.bashrc
+. ~/.bashrc
