@@ -1,0 +1,34 @@
+Host github.ibm.com
+HostName github.ibm.com
+User git
+IdentityFile ~/.ssh/id_rsa
+
+Host truthadjustr-github.com
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa_truth
+
+Host escafe-github.com
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa_escafe
+
+Host ic2etest-github.ibm.com
+HostName github.ibm.com
+User git
+IdentityFile ~/.ssh/ic2etest-id_rsa
+
+Host eigenfi3ld-github.ibm.com
+HostName github.ibm.com
+User git
+IdentityFile ~/.ssh/id_rsa_e-eigenfi3ld
+
+Host github.com
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa
+
+Host github.w3ibm.bluemix.net
+HostName github.w3ibm.bluemix.net
+User git
+IdentityFile ~/.ssh/id_rsa
