@@ -9,7 +9,7 @@ if (($(echo $BASH_VERSION |cut -d'.' -f2)>=3));then
     E="\e"
     . ~/src/commandline/git-prompt.sh
     #export PS1="\[$E$b\]$p$q[\$?\[$E$c\]|\[$E$b\]\$msgcount\[$E$b\]]$q\[$E$b\][\$(__git_ps1)]$q<\[$E$b\]\h:\[$E$c\]\w\[$E$b\]>\n$r\[$E$b\]"
-    export PS1="\[$E$b\]$p$q[\$?\[$E$c\]|\[$E$b\]\$msgcount\[$E$b\]]$q\[$E$b\][\$(__git_ps1)]$q<\[$E$b\]\[$E$c\]\w\[$E$b\]>\n$r\[$E$b\]"
+    export PS1="\[$E$b\]$p$q[\$?\[$E$c\]|\[$E$b\]\$msgcount\[$E$b\]]$q\[$E$b\][\$(__git_ps1)]$q<\h:\[$E$b\]\[$E$c\]\w\[$E$b\]>\n$r\[$E$b\]"
 else
     export HISTFILESIZE=400000000
     export HISTSIZE=10000
