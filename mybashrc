@@ -7,7 +7,8 @@ if (($(echo $BASH_VERSION |cut -d'.' -f2)>=3));then
     q="\342\224\200"
     r="\342\224\224"
     E="\e"
-    . ~/src/commandline/git-prompt.sh
+    #. ~/src/commandline/git-prompt.sh
+    . /home/aparicdd/Desktop/commandline/git-prompt.sh
     #export PS1="\[$E$b\]$p$q[\$?\[$E$c\]|\[$E$b\]\$msgcount\[$E$b\]]$q\[$E$b\][\$(__git_ps1)]$q<\[$E$b\]\h:\[$E$c\]\w\[$E$b\]>\n$r\[$E$b\]"
     export PS1="\[$E$b\]$p$q[\$?\[$E$c\]|\[$E$b\]\$msgcount\[$E$b\]]$q\[$E$b\][\$(__git_ps1)]$q<\[$E$b\]\[$E$c\]\w\[$E$b\]>\n$r\[$E$b\]"
 else
@@ -39,11 +40,12 @@ HISTORY() {
 
 alias od='od -w32 --endian=big -t x1z' 
 
-if [ -z "$TMUX" ];then
-    if tmux ls 2>/dev/null; then
-        tmux attach -t "main"
-    else
-        tmux new-session -s "main"
-    fi
-fi
+# let the user decide 
+#if [ -z "$TMUX" ];then
+#    if tmux ls 2>/dev/null; then
+#        tmux attach -t "main"
+#    else
+#        tmux new-session -s "main"
+#    fi
+#fi
 
