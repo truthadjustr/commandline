@@ -1,0 +1,2 @@
+source __git_ps1.sh
+export PS1="\[$E$b\]$p$q[\$?\[$E$c\]|\[$E$b\]\$msgcount\[$E$b\]]$q\[$E$b\]$q<\h:\[$E$b\]\[$E$c\]\w\[$E$b\]>\$(__git_ps1)\n$r\[$E$b\]"
